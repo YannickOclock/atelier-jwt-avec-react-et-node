@@ -1,0 +1,23 @@
+label span {
+  font-size: 0.7rem;
+  color: grey;
+  margin-left: 1rem;
+}
+
+h2 {
+  margin-top: 1rem;
+}
+
+button {
+  width: 100%;
+}
+
+pre > code {
+  font-size: 0.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}

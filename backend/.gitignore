@@ -1,0 +1,12 @@
+# Environment
+.env
+
+# Database
+database.sqlite
+
+# Node.js specific
+node_modules/
+
+# OS specific
+.DS_Store
+

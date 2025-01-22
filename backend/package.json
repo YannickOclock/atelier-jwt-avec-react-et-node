@@ -1,0 +1,30 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Authentication demo using JWT and CSRF protection",
+  "keywords": [
+    "auth",
+    "jwt",
+    "csrf"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "db:reset": "node ./models/reset.js"
+  },
+  "author": "contact@oclock.io",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "sequelize": "^6.37.2",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.23.4"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication Test Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.classless.css">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Authentication Test Page</h1>
+  </header>
+
+  <main class="container">
+
+    <div>
+      <section aria-labelledby="signup">
+        <h2 id="signup">Create an account</h2>
+        <form id="signup-form">
+          <label for="signup-username">
+            User name
+            <input type="text" name="username" id="signup-username" value="DarkEnzo">
+          </label>
+          <label for="signup-email">
+            Email
+            <input type="email" name="email" id="signup-email" value="enzo@oclock.io">
+          </label>
+          <label for="signup-password">
+            Password
+            <input type="password" name="password" id="signup-password" value="toto42oclock">
+          </label>
+          <label for="signup-confirm">
+            Confirm Password
+            <input type="password" name="confirm" id="signup-confirm" value="toto42oclock">
+          </label>
+          <button>Create an account</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="unauthenticated">
+        <h2 id="unauthenticated">
+          Unauthenticated requests
+        </h2>
+
+        <div class="container">
+          <ul>
+            <li><button id="get-unauthenticated-public-stuff">GET /public-stuff</button></li>
+            <li><button id="get-unauthenticated-private-stuff">GET /private-stuff</button></li>
+          </ul>
+          <pre><code id="unauthenticated-response"></code></pre>
+        </div>
+      </section>
+
+      <section aria-labelledby="authenticated">
+        <h2 id="authenticated">
+          Authenticated requests
+        </h2>
+
+        <div class="container">
+          <ul>
+            <li><button id="get-authenticated-public-stuff">GET /public-stuff</button></li>
+            <!-- ETAPE 4 - je souhaite accéder à des données personnelles -->
+            <li><button id="get-authenticated-private-stuff">GET /private-stuff</button></li>
+            <li><button id="get-profile-data">GET /profile</button></li>
+          </ul>
+          <pre><code id="authenticated-response"></code></pre>
+        </div>
+      </section>
+    </div>
+
+    <div>
+      <section aria-labelledby="login">
+        <h2 id="login">Log in</h2>
+        <form id="login-form">
+          <label for="login-email">
+            Email
+            <input type="email" name="email" id="login-email" value="enzo@oclock.io">
+          </label>
+          <label for="login-password">
+            Password
+            <input type="password" name="password" id="login-password" value="toto42oclock">
+          </label>
+          <button>Log in</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="refresh">
+        <h2 id="refresh">Current tokens</h2>
+
+        <form id="refresh-form">
+          <label for="username">
+            Username
+            <span>Récupéré lors du login: <time></time></span>
+            <input id="username" type="text">
+          </label>
+          <label for="access-token">
+            Access Token (JWT)
+            <span>Stored in localStorage - Valid until: <time></time></span>
+            <input id="access-token" type="text">
+          </label>
+        </form>
+      </section>
+
+      <section aria-labelledby="logout">
+        <h2 id="logout">Log out</h2>
+        <form id="logout-form">
+          <button>Log out</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+</body>
+
+</html>
